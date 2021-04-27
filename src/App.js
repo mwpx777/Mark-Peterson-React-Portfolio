@@ -1,7 +1,7 @@
 
 import './index.css';
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Nav from './components/Nav';
 import About from './components/About';
 import Gallery from './components/Gallery';
@@ -11,18 +11,11 @@ import Footer from './components/Footer';
 
 
 function App() {
+  // hide contact form by default
+  const [contactSelected, setContactSelected] = useState(false);
 
-  const[contactSelected, setContactSelected] = useState(false);
 
   const [categories] = useState([
-    // {
-    //   name: "Home",
-    //   description: "Home"
-    // },
-    // {
-    //   name: 'Bio',
-    //   description: "Mark's Biography"
-    // },
     {
       name: 'Web Dev',
       description: 'Web Development Projects'
@@ -31,12 +24,7 @@ function App() {
       name: 'Graphic Design',
       description: 'Graphic Design Portfolio'
     },
-    {
-      name: 'Contact Me'
-
-    }
-
-  ])
+  ]);
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
@@ -49,7 +37,7 @@ function App() {
         currentCategory={currentCategory}
         contactSelected={contactSelected}
         setContactSelected={setContactSelected}
-      />
+      ></Nav>
 
       <main>
         {!contactSelected ? (
