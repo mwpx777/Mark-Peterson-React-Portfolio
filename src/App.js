@@ -15,14 +15,14 @@ function App() {
   const[contactSelected, setContactSelected] = useState(false);
 
   const [categories] = useState([
-    {
-      name: "Home",
-      description: "Home"
-    },
-    {
-      name: 'Bio',
-      description: "Mark's Biography"
-    },
+    // {
+    //   name: "Home",
+    //   description: "Home"
+    // },
+    // {
+    //   name: 'Bio',
+    //   description: "Mark's Biography"
+    // },
     {
       name: 'Web Dev',
       description: 'Web Development Projects'
@@ -30,6 +30,10 @@ function App() {
     {
       name: 'Graphic Design',
       description: 'Graphic Design Portfolio'
+    },
+    {
+      name: 'Contact Me'
+
     }
 
   ])

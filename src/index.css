@@ -17,10 +17,11 @@ code {
   width: 3rem;
 }
 * {
-   background: blue;
+   background: rgb(170, 170, 170);
  }
 .container{
   display: flex;
+  justify-content:center;
   
 }
 
@@ -31,4 +32,36 @@ code {
  a {
    padding: 1rem;
  
+ }
+ .container{
+   display: flex
+ }
+
+ .footer-container{
+   display:flex;
+   justify-content:center;
+ }
+
+ .footer{
+   display: flex;
+   justify-content:center;
+ }
+
+ #mwpLogo {
+  height: 40px;
+  margin-left: 1rem;
+
+ }
+
+ #bioText{
+   font-size:1.5rem;
+ }
+
+ .card{
+   width: 70%;
+   
+ }
+
+ .card-header{
+   background-color: blue;
  }

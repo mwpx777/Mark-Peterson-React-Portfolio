@@ -10,7 +10,7 @@ import resume from '../../assets/Mark Peterson Resume.pdf'
 
 function Nav(props) {
 
-    const{
+    const {
         categories = [],
         setCurrentCategory,
         currentCategory,
@@ -19,46 +19,60 @@ function Nav(props) {
     } = props;
 
     return (
-        <header className="flex-row px-1">
-            <div className="container">
-                <div className="row">
-                    <div className="navbar">
-                    <h2>
-                        {/* <a href="/">
-                            <span>Home</span>
-                        </a>
-                        <a href="/">
-                            <span>Bio</span>
-                        </a>
-                        <a href="/">
-                            <span>Web Dev</span>
-                        </a>
-                        <a href="/">
-                            <span> Graphic Design</span>
-                        </a> */}
-                        <a href={resume} alt="Resume" target="_blank">
-                            <span> Resume</span>
-                        </a>
-                        <a href="#email">
-                            <img src={email} alt="Email" id="icon" />
-                        </a>
-                        <a href="https://github.com/mwpx777" target="_blank">
-                            <img src={github} alt="Github" id="icon" />
-                        </a>
-                        <a href="https://www.linkedin.com/in/mwpdesigns/" target="_blank">
+        // <header className="flex-row px-1">
+        <div className="container">
+            <div className="row">
 
-                            <img src={linkedIn} alt="LinkedIn" id="icon" />
+                <h2>
+                    <a href="/">
+                        <span>Home</span>
+                    </a>
+                    <a href="#about" onClick={() => setContactSelected(false)}>
+                        <span>Bio</span>
+                    </a>
+                    <div className={`mx-2 ${contactSelected && 'navActive'}`}>
+                        <span onClick={() => setContactSelected(true)}>Contact</span>
+                    </div>
+                    {categories.map((category) => {
+                        <div className={`mx-1 ${currentCategory.name === category.name && !contactSelected && `navActive`}`} key={category.name}>
+                            <span onClick={() => {
+                                setCurrentCategory(category);
+                                setContactSelected(false);
 
-                        </a>
-                        <a href="https://www.instagram.com/mwp_designs/" target="_blank">
-                            <img src={instagram} alt="Instagram" id="icon" />
-                        </a>
+                            }}>
+                            </span>
+                        </div>
+                    })}
+                    {/* <a href="/">
+                        <span>Web Dev</span>
+                    </a>
+                    <a href="/">
+                        <span> Graphic Design</span>
+                    </a> */}
+                    <a href={resume} alt="Resume" target="_blank" rel="noreferrer">
+                        <span> Resume</span>
+                    </a>
 
-                    </h2>
-                </div>
+                    {/* <a href="#email">
+                        <img src={email} alt="Email" id="icon" />
+                    </a> */}
+                    <a href="https://github.com/mwpx777" target="_blank" rel="noreferrer">
+                        <img src={github} alt="Github" id="icon" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/mwpdesigns/" target="_blank" rel="noreferrer">
+
+                        <img src={linkedIn} alt="LinkedIn" id="icon" />
+
+                    </a>
+                    <a href="https://www.instagram.com/mwp_designs/" target="_blank" rel="noreferrer">
+                        <img src={instagram} alt="Instagram" id="icon" />
+                    </a>
+
+                </h2>
+
             </div>
-            </div>
-        </header>
+        </div>
+        // </header>
 
     );
 }
