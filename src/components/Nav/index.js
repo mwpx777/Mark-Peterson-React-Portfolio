@@ -2,10 +2,8 @@
 
 import React from 'react';
 // import {ReactSVG} from 'react-svg'
-import linkedIn from '../../assets/linkedin.svg'
-import github from '../../assets/github.svg'
-import email from '../../assets/email.svg'
-import instagram from '../../assets/instagram.svg'
+// import email from '../../assets/email.svg'
+
 import resume from '../../assets/Mark Peterson Resume.pdf'
 
 
@@ -21,59 +19,58 @@ function Nav(props) {
     } = props;
 
     return (
-        // <header className="flex-row px-1">
-        <div className="container">
-            <div className="row">
 
-                <a href="/">
-                    <span>Home</span>
-                </a>
-                <a href="#about" onClick={() => setContactSelected(false)}>
-                    <span>Bio</span>
-                </a>
-                <ul>
+        <nav className="navbar navbar-expand-lg navbar-light " id="navbar">
+
+         <div className="navbarCenter">
+                <ul className="navbar-nav">
+                    <li className="nav-item">
+                        <a className="nav-link" href="/">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#bioText" onClick={() => setContactSelected(false)}>
+                            <span>Bio</span>
+                        </a>
+                    </li>
                     {categories.map((category) => {
-                        console.log(category.name);
-                        // Web Dev, Graphic Design
-                       console.log(currentCategory);
-                        // name: "Web Dev", description:" web dev projects"
-                        <li className={`mx-1 ${currentCategory.name === category.name && !contactSelected && `navActive`}`} key={category.name}>
-                            <span onClick={() => {
-                                setCurrentCategory(category);
-                                setContactSelected(false);
 
-                            }}>
-                            </span>
-                        </li>
+                        return (
+                            <li 
+                                className={`nav-item nav-link ${currentCategory.name === category.name &&
+                                    !contactSelected &&
+                                    `navActive`
+                                    }`}
+                                key={category.name}
+                            >
+                                <div onClick={() => {
+                                    setCurrentCategory(category);
+                                    setContactSelected(false);
+
+                                }}
+                                >{(category.name)}</div>
+                            </li>
+                        );
                     })}
+                    <li className="nav-item">
+                        <a className="nav-link" href={resume} alt="Resume" target="_blank" rel="noreferrer">
+                            <span> Resume</span>
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <section className={`nav-link  ${contactSelected && 'navActive'}`}>
+                            <span onClick={() => setContactSelected(true)}>Contact Me</span>
+                        </section>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#links" onClick={() => setContactSelected(false)}>
+                            <span>Links</span>
+                        </a>
+                    </li>
                 </ul>
-                <a href={resume} alt="Resume" target="_blank" rel="noreferrer">
-                    <span> Resume</span>
-                </a>
-
-                <section className={`mx-2 ${contactSelected && 'navActive'}`}>
-                    <span onClick={() => setContactSelected(true)}><img src={email} alt="Email" id="icon" /></span>
-
-                    <a href="https://github.com/mwpx777" target="_blank" rel="noreferrer">
-                        <img src={github} alt="Github" id="icon" />
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/mwpdesigns/" target="_blank" rel="noreferrer">
-
-                        <img src={linkedIn} alt="LinkedIn" id="icon" />
-
-                    </a>
-
-                    <a href="https://www.instagram.com/mwp_designs/" target="_blank" rel="noreferrer">
-                        <img src={instagram} alt="Instagram" id="icon" />
-                    </a>
-
-                </section>
-
-
-            </div>
-        </div>
-        // </header>
+                </div>
+        </nav>
 
     );
 }

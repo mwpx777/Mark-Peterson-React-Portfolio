@@ -65,3 +65,47 @@ code {
  .card-header{
    background-color: blue;
  }
+ footer{
+   padding: 2rem;
+   
+ }
+
+ #footer{
+   align-items: center;
+ }
+
+ #navContainer{
+   display:flex;
+   flex-direction: start;
+  
+ }
+ 
+
+#navbar {
+  display: flex;
+  justify-content:center;
+  width: 100%;
+  
+}
+
+.navbar-nav{
+padding-left: 1.5rem;
+padding-right: 1.5rem;
+
+}
+.nav-item{
+  font-size: 1.5rem;
+
+}
+
+
+#contact, button{
+  color: white;
+  background: none;
+  font-size: 1.5rem;
+} 
+
+textarea, input{
+  background: white;
+  
+}

@@ -6,7 +6,7 @@ import titleImage from '../../assets/Desk with Text.jpg';
 function About() {
     return (
         <section className="my-5" id="#about">
-            <h1>Bio</h1>
+            
             <img src={titleImage} className='my-2' style={{ width: "100%" }} alt="titleImage" />
                 <div className="container">
                     <p id="bioText">

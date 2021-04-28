@@ -38,22 +38,23 @@ function ContactForm() {
 
     return (
         <div className="container">
-            <div className="card">
-                <div className="card-header">
-                    Contact Me
+            <div className="card bg-dark">
+                <div className="card-header" >
+                    <span id="contact">Contact Me</span>
             </div>
-                <div className="card-body">
+                <div className="card-body ">
                     <form id="contact-form" onSubmit={handleSubmit} >
                         <div>
-                            <label htmlFor="name">Name:</label>
+                            <label htmlFor="name">Name: </label>
+                            {/* create div for names */}
                             <input type="text" defaultValue={name} onBlur={handleChange} name="name" />
                         </div>
                         <div>
-                            <label htmlFor="email">Email:</label>
-                            <input type="text" defaultValue={name} onBlur={handleChange} name="email" />
+                            <label htmlFor="email">Email: </label>
+                            <input type="text" defaultValue={email} onBlur={handleChange} name="email" />
                         </div>
                         <div>
-                            <label htmlFor="name">Message:</label>
+                            <label htmlFor="name">Message: </label>
                             <textarea name="message" defaultValue={message} onBlur={handleChange} rows="5" />
                         </div>
                         {errorMessage && (
@@ -61,7 +62,7 @@ function ContactForm() {
                                 <p className="error-text"> {errorMessage}</p>
                             </div>
                         )}
-                        <button type="submit">Submit!</button>
+                        <button className="bg-dark"type="submit">Submit!</button>
                     </form>
                 </div>
             </div >
