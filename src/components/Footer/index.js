@@ -4,14 +4,16 @@ import linkedIn from '../../assets/linkedin.svg'
 import github from '../../assets/github.svg'
 
 import instagram from '../../assets/instagram.svg'
+import icon from '../../assets/logo192.png'
 
 
 function Footer() {
     return (
-        <footer id="links">
-            
-            <div className="container" >
+        <footer id="links" className="container">
+
+            <div  >
                 <div className="row" id="footer">
+
                     <h3>&#169; 2021 Created by Mark Peterson</h3>
                     <img src={MWPLogo} id="mwpLogo" alt="MWP Designs Logo" />
                     <a href="https://github.com/mwpx777" target="_blank" rel="noreferrer">
@@ -28,12 +30,16 @@ function Footer() {
                         <img src={instagram} alt="Instagram" id="icon" />
                     </a>
                 </div>
-                
-         </div>
+
+                <div className="row" id="react">
+                    <span>Built with React  <img src={icon} style={{ width: "2rem" }} /> </span>
+                </div>
+            </div>
+
         </footer>
 
     )
 
-}   
+}
 
 export default Footer;

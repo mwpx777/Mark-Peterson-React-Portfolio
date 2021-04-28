@@ -4,9 +4,10 @@ import './index.css';
 import React, { useState } from 'react';
 import Nav from './components/Nav';
 import About from './components/About';
-import Gallery from './components/Gallery';
+// import Gallery from './components/Gallery';
 import ContactForm from './components/Contact';
 import Footer from './components/Footer';
+import CarouselContainer from './components/CarouselContainer'
 
 
 
@@ -39,7 +40,8 @@ function App() {
       <main>
         {!contactSelected ? (
           <>
-            <Gallery currentCategory={currentCategory} />
+           <CarouselContainer currentCategory={currentCategory} />
+           
             <About />
           </>
         ) : (

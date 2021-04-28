@@ -74,6 +74,11 @@ code {
    align-items: center;
  }
 
+ #react{
+   justify-content:center;
+   align-items: center;
+ }
+
  #navContainer{
    display:flex;
    flex-direction: start;
@@ -115,7 +120,7 @@ textarea, input{
   align-self: flex-end;
 }
 
-.modalCard{
+.modalCard, .carousel{
   display:flex;
   justify-content:center;
 }
@@ -127,3 +132,26 @@ textarea, input{
   margin: 2rem;
 }
 
+
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+  filter: invert(100%);
+}
+
+#sectionContainer{
+  display: flex;
+  justify-content:space-around;
+}
+
+#carouselItem{
+  display: flex;
+  justify-content: center;
+  border:3px solid black;
+  border-radius: 3px;
+  box-shadow: 8px 8px 5px rgb(114, 114, 114);
+}
+
+
+.carousel{
+   width: 70%;
+}

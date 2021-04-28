@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Modal from '../Modal';
-import movie from "../../assets/webdev/0.png"
+
 
 function Gallery(props) {
     const { currentCategory } = props;  // {"name":"Web Dev"}
@@ -52,7 +52,7 @@ function Gallery(props) {
             index: "5",
             repo: "https://github.com/mwpx777/Budget-Tracker-PWA"
         },
-        
+
     ]);
 
 
@@ -89,6 +89,8 @@ function Gallery(props) {
                 </div>
             </div>
         </section>
+
+      
     )
 }
 

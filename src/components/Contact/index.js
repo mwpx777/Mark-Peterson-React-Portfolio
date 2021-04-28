@@ -46,17 +46,19 @@ function ContactForm() {
                     <form id="contact-form" onSubmit={handleSubmit} >
                         <div>
                             <label htmlFor="name">Name: </label>
-                            {/* create div for names */}
-                            <input type="text" defaultValue={name} onBlur={handleChange} name="name" />
-                        </div>
+                          </div>
+                            <input type="text" defaultValue={name} onBlur={handleChange} name="name" style={{width: "100%"}}/>
+                        
                         <div>
                             <label htmlFor="email">Email: </label>
-                            <input type="text" defaultValue={email} onBlur={handleChange} name="email" />
-                        </div>
+                            </div>
+                            <input type="text" defaultValue={email} onBlur={handleChange} name="email" style={{width: "100%"}}/>
+                        
                         <div>
                             <label htmlFor="name">Message: </label>
-                            <textarea name="message" defaultValue={message} onBlur={handleChange} rows="5" />
-                        </div>
+                            </div>
+                            <textarea name="message" defaultValue={message} onBlur={handleChange} rows="5" style={{width: "100%"}}/>
+                       
                         {errorMessage && (
                             <div>
                                 <p className="error-text"> {errorMessage}</p>
