@@ -17,13 +17,10 @@ function App() {
 
   const [categories] = useState([
     {
-      name: 'Web Dev',
+      name: 'Projects',
       description: 'Web Development Projects'
     },
-    {
-      name: 'Graphic Design',
-      description: 'Graphic Design Portfolio'
-    },
+
   ]);
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
