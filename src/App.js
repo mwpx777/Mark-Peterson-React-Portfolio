@@ -7,13 +7,14 @@ import About from './components/About';
 import ContactForm from './components/Contact';
 import Footer from './components/Footer';
 import CarouselContainer from './components/CarouselContainer'
+// import {NavLink} from 'react-router-dom';
 
 
 
 
 function App() {
   // hide contact form by default
-  const [contactSelected, setContactSelected] = useState(false);
+  // const [contactSelected, setContactSelected] = useState(false);
 
 
 
@@ -59,10 +60,6 @@ function App() {
 
     }
   }
-  // const state = ()=>{
-
-  //  newFunction(useState());
-  // }
 
   return (
     <div >
@@ -70,8 +67,8 @@ function App() {
         categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
-        contactSelected={contactSelected}
-        setContactSelected={setContactSelected}
+        // contactSelected={contactSelected}
+        // setContactSelected={setContactSelected}
 
       ></Nav>
 

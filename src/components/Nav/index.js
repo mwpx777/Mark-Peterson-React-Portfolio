@@ -3,20 +3,15 @@
 import React from 'react';
 import Mark from '../../assets/Mark Peterson Website background.png';
 import resume from '../../assets/Mark Peterson Resume.pdf';
-import {NavLink} from 'react-router-dom';
-
-
 
 
 function Nav(props) {
-
 
     const {
         categories = [],
         setCurrentCategory,
         currentCategory,
-        contactSelected,
-        setContactSelected
+
     } = props;
 
     return (
@@ -25,7 +20,7 @@ function Nav(props) {
 
             <div className="navbarCenter">
                 <ul className="navbar-nav">
-                    <li className="nav-item">
+                    <li className="nav-item" >
                         <a className="nav-link" href="/">
                             <span>Home</span>
                         </a>
@@ -35,19 +30,15 @@ function Nav(props) {
 
                         return (
                             <li id="projectsWord"
-                                className={`nav-item nav-link ${currentCategory.name === category.name &&
-                                    !contactSelected &&
-                                    `navActive`
-                                    }`}
-                                key={category.name}
+                                className={`nav-item nav-link ${currentCategory.name === category.name && `navActive`}`}
+                                key={category.name}>
 
-                            >
-                                <div onClick={() => {
+                                <span onClick={() => {
                                     setCurrentCategory(category);
-                                    setContactSelected(false);
-
+                                    console.log(category);
                                 }}
-                                >{(category.name)}</div>
+                                >{(category.name)}
+                                </span>
                             </li>
                         );
                     })}

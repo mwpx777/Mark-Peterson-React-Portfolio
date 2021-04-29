@@ -185,3 +185,7 @@ textarea, input{
 a:active{
   color:blue;
 }
+
+.main-nav-active{
+  color: tomato;
+}

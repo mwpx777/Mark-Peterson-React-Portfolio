@@ -94,7 +94,7 @@ const CarouselContainer = (props) => {
                 alt={image.name}
                 className="d-block w-100"
                 onClick={() => toggleModal(image, index)}
-                key={image.index}
+                key={image.name}
               />
                <Carousel.Caption>
      
