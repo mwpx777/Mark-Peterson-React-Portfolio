@@ -32,7 +32,7 @@ function Footer() {
                 </div>
 
                 <div className="row" id="react">
-                    <span>Built with React  <img src={icon} style={{ width: "2rem" }} /> </span>
+                    <span>Built with React<a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src={icon} alt="react icon" style={{ width: "2rem" }} /> </a></span>
                 </div>
             </div>
 

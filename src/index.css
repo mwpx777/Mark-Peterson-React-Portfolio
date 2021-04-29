@@ -26,7 +26,7 @@ code {
 }
 
  .navbar{
-   display: flex;
+    display: flex;
    justify-content: space-between;
  }
  a {
@@ -125,10 +125,15 @@ textarea, input{
   justify-content:center;
 }
 
+.modalContainer{
+  position:absolute;
+  z-index: 100;
+}
+
 .card{
   display: flex;
   justify-content: center;
-  width: 30%;
+  width: 80%;
   margin: 2rem;
 }
 
@@ -140,10 +145,11 @@ textarea, input{
 
 #sectionContainer{
   display: flex;
-  justify-content:space-around;
+  justify-content:center;
 }
 
 #carouselItem{
+  width:35%;
   display: flex;
   justify-content: center;
   border:3px solid black;
@@ -154,4 +160,28 @@ textarea, input{
 
 .carousel{
    width: 70%;
+}
+
+#about{
+  display: flex;
+  justify-content: center;
+ 
+}
+#bioSection{
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+
+#contactWord, #projectsWord{
+  cursor: pointer;
+}
+
+
+ #projectsWord:active {
+  color: green;
+}
+
+a:active{
+  color:blue;
 }

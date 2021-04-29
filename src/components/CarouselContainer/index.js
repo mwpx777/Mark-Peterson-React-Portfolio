@@ -11,7 +11,7 @@ import Modal from '../Modal';
 
 const CarouselContainer = (props) => {
   const { currentCategory } = props;
-  console.log(currentCategory.name);
+  // console.log(currentCategory.name);
 
   const [photos] = useState([
     {
@@ -52,7 +52,7 @@ const CarouselContainer = (props) => {
     {
       name: "Budget Tracker PWA",
       category: 'webdev',
-      description: "This is a budget tracking application that I converted into a PWA.  This application will work offline, and will update transactions when it establishs a network connection.  This PWA conversion was built with Node.js, Express.js, Service Worker, IndexedDB,MongoDB and Mongoose ",
+      description: "This is a budget tracking application that I converted into a PWA.  This application will work offline, and will update transactions when it establishs a network connection.  This PWA conversion was built with Node.js, Express.js, Service Worker, IndexedDB, MongoDB and Mongoose ",
       index: "5",
       repo: "https://github.com/mwpx777/Budget-Tracker-PWA"
     },
@@ -68,18 +68,9 @@ const CarouselContainer = (props) => {
     setCurrentPhoto({ ...image, index: i })
     // this will set modal to true or false depening on its state
     setIsModalOpen(!isModalOpen);
-    closeCarousel(image, i);
     
   }
-  const closeCarousel =(image, i) => {
-  var x = document.getElementById("carouselClose");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-    toggleModal(image, i);
-  }
-}
+
   // this hook manages if modal is open
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -89,9 +80,9 @@ const CarouselContainer = (props) => {
     <>
       <h1> {(currentCategory.name)} </h1>
       <p>{currentCategory.description}</p>
+      {isModalOpen && (<Modal currentPhoto={currentPhoto} onClose={toggleModal} />)}
     <section id="sectionContainer">
     <div className="carousel" id="carouselClose">
-      {isModalOpen && (<Modal currentPhoto={currentPhoto} onClose={toggleModal} />)}
       <Carousel id="carouselItem">
       {photos.map((image, index) => {
 
@@ -107,7 +98,7 @@ const CarouselContainer = (props) => {
               />
                <Carousel.Caption>
      
-      <p>Click image for more info!.</p>
+      <p>Click the image for more info!</p>
     </Carousel.Caption>
 
             </Carousel.Item>
