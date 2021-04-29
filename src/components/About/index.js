@@ -4,9 +4,13 @@ import React from 'react';
 import titleImage from '../../assets/Desk with Text.jpg';
 import MWP from '../../assets/Photo-Small.jpg'
 
-const About = () => {
+const About = (props) => {
+    const { currentCategory } = props;
     
     return (
+        <>
+             <h1> {(currentCategory.name)} </h1>
+            <p>{currentCategory.description}</p>
         <section className="my-5" id="#about">
 
             <img src={titleImage} className='my-2' style={{ width: "100%" }} alt="titleImage" />
@@ -30,6 +34,7 @@ const About = () => {
             </div>
 
         </section >
+        </>
     )
 }
 

@@ -14,6 +14,8 @@ function Nav(props) {
 
     } = props;
 
+
+
     return (
         <nav className="navbar navbar-expand-lg navbar-light " id="navbar">
             <img src={Mark} alt="headerLogo" style={{ width: "15%", margin: "1rem" }} />
@@ -21,8 +23,8 @@ function Nav(props) {
             <div className="navbarCenter">
                 <ul className="navbar-nav">
                     <li className="nav-item" >
-                        <a className="nav-link" href="/">
-                            <span>Home</span>
+                        <a className="nav-link" id="navLink" href="/">
+                            Home
                         </a>
                     </li>
 
@@ -35,6 +37,7 @@ function Nav(props) {
 
                                 <span onClick={() => {
                                     setCurrentCategory(category);
+                                  
                                     console.log(category);
                                 }}
                                 >{(category.name)}
@@ -44,19 +47,10 @@ function Nav(props) {
                     })}
                     <li className="nav-item">
                         <a className="nav-link" href={resume} alt="Resume" target="_blank" rel="noreferrer">
-                            <span> Resume</span>
+                            <span id="navLink"> Resume</span>
                         </a>
                     </li>
-                    {/* <li className="nav-item" id="contactWord">
-                        <section className={`nav-link  ${contactSelected && 'navActive'}`}>
-                            <span onClick={() => setContactSelected(true)}>Contact</span>
-                        </section>
-                    </li>  */}
-                    {/* <li className="nav-item">
-                        <a className="nav-link" href="#links" onClick={() => setContactSelected(false)}>
-                            <span>Links</span>
-                        </a>
-                    </li> */}
+            
                 </ul>
             </div>
         </nav>

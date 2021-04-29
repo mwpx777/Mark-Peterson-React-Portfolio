@@ -3,12 +3,13 @@
 import React, { useState } from 'react'
 import { validateEmail } from '../../utils/helpers';
 
-function ContactForm() {
+function ContactForm(props) {
     // set formState to empty strings
     const [formState, setFormState] = useState({ name: '', email: '', message: '' });
     // set errorMessage to empty string
     const [errorMessage, setErrorMessage] = useState('');
     const { name, email, message } = formState;
+    const { currentCategory } = props;
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -37,6 +38,9 @@ function ContactForm() {
 
 
     return (
+        <>
+        <h1> {(currentCategory.name)} </h1>
+       <p>{currentCategory.description}</p>
         <div className="container">
             <div className="card bg-dark">
                 <div className="card-header" >
@@ -69,6 +73,7 @@ function ContactForm() {
                 </div>
             </div >
         </div>
+        </>
     );
 }
 

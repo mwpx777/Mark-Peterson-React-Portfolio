@@ -178,14 +178,11 @@ textarea, input{
 }
 
 
- #projectsWord:active {
-  color: green;
+ #projectsWord:hover {
+  color: blue;
 }
 
-a:active{
-  color:blue;
+#navLink:hover{
+  color: blue
 }
 
-.main-nav-active{
-  color: tomato;
-}

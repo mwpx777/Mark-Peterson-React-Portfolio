@@ -41,22 +41,22 @@ function App() {
         return (
           <About currentCategory={currentCategory} />
         )
-        break;
+       
       case "Projects":
         return (
           <CarouselContainer currentCategory={currentCategory} />
         )
-        break;
+       
       case "Contact":
         return (
           <ContactForm currentCategory={currentCategory} />
         )
-        break;
+       
       default:
         return (
           <About currentCategory={currentCategory} />
         )
-        break;
+       
 
     }
   }
