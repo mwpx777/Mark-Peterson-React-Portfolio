@@ -23,7 +23,7 @@ function Nav(props) {
             <div className="navbarCenter">
                 <ul className="navbar-nav">
                     <li className="nav-item" >
-                        <a className="nav-link" id="navLink" href="/">
+                        <a className="nav-link" id="navLink" href="/index.html">
                             Home
                         </a>
                     </li>
