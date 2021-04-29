@@ -1,0 +1,188 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color:black;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#icon {
+  width: 3rem;
+}
+* {
+   background: rgb(170, 170, 170);
+ }
+.container{
+  display: flex;
+  justify-content:center;
+  
+}
+
+ .navbar{
+    display: flex;
+   justify-content: space-between;
+ }
+ a {
+   padding: 1rem;
+ 
+ }
+ .container{
+   display: flex
+ }
+
+ .footer-container{
+   display:flex;
+   justify-content:center;
+ }
+
+ .footer{
+   display: flex;
+   justify-content:center;
+ }
+
+ #mwpLogo {
+  height: 40px;
+  margin-left: 1rem;
+
+ }
+
+ #bioText{
+   font-size:1.5rem;
+ }
+
+ .card{
+   width: 70%;
+   
+ }
+
+ .card-header{
+   background-color: blue;
+ }
+ footer{
+   padding: 2rem;
+   
+ }
+
+ #footer{
+   align-items: center;
+ }
+
+ #react{
+   justify-content:center;
+   align-items: center;
+ }
+
+ #navContainer{
+   display:flex;
+   flex-direction: start;
+  
+ }
+ 
+
+#navbar {
+  display: flex;
+  justify-content:center;
+  width: 100%;
+  
+}
+
+.navbar-nav{
+padding-left: 1.5rem;
+padding-right: 1.5rem;
+
+}
+.nav-item{
+  font-size: 1.5rem;
+
+}
+
+
+#contact, button{
+  color: white;
+  background: none;
+  font-size: 1.5rem;
+} 
+
+textarea, input{
+  background: white;
+  
+}
+
+#closeModal{
+  
+  align-self: flex-end;
+}
+
+.modalCard, .carousel{
+  display:flex;
+  justify-content:center;
+}
+
+.modalContainer{
+  position:absolute;
+  z-index: 100;
+}
+
+.card{
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 2rem;
+}
+
+
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+  filter: invert(100%);
+}
+
+#sectionContainer{
+  display: flex;
+  justify-content:center;
+}
+
+#carouselItem{
+  width:35%;
+  display: flex;
+  justify-content: center;
+  border:3px solid black;
+  border-radius: 3px;
+  box-shadow: 8px 8px 5px rgb(114, 114, 114);
+}
+
+
+.carousel{
+   width: 70%;
+}
+
+#about{
+  display: flex;
+  justify-content: center;
+ 
+}
+#bioSection{
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+
+#contactWord, #projectsWord{
+  cursor: pointer;
+}
+
+
+ #projectsWord:hover {
+  color: blue;
+}
+
+#navLink:hover{
+  color: blue
+}
+
