@@ -7,6 +7,7 @@ import About from './components/About';
 import ContactForm from './components/Contact';
 import Footer from './components/Footer';
 import CarouselContainer from './components/CarouselContainer'
+import Resume from './components/Resume'
 // import {NavLink} from 'react-router-dom';
 
 
@@ -29,6 +30,9 @@ function App() {
     },
     {
       name: 'Contact'
+    },
+    {
+      name: 'Resume'
     }
 
   ]);
@@ -50,6 +54,11 @@ function App() {
       case "Contact":
         return (
           <ContactForm currentCategory={currentCategory} />
+        )
+
+      case "Resume":
+        return (
+          <Resume currentCategory={currentCategory} />
         )
        
       default:

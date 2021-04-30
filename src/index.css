@@ -186,3 +186,14 @@ textarea, input{
   color: blue
 }
 
+.resume{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resumeContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

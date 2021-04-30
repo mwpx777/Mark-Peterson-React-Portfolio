@@ -45,11 +45,11 @@ function Nav(props) {
                             </li>
                         );
                     })}
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <a className="nav-link" href={resume} alt="Resume" target="_blank" rel="noreferrer">
                             <span id="navLink"> Resume</span>
                         </a>
-                    </li>
+                    </li> */}
             
                 </ul>
             </div>
