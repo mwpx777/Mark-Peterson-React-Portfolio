@@ -14,6 +14,7 @@ const CarouselContainer = (props) => {
   // console.log(currentCategory.name);
 
   const [photos] = useState([
+
     {
       name: "Movie Streaming Search",
       category: 'webdev',
@@ -55,6 +56,13 @@ const CarouselContainer = (props) => {
       description: "This is a budget tracking application that I converted into a PWA.  This application will work offline, and will update transactions when it establishs a network connection.  This PWA conversion was built with Node.js, Express.js, Service Worker, IndexedDB, MongoDB and Mongoose ",
       index: "5",
       repo: "https://github.com/mwpx777/Budget-Tracker-PWA"
+    },
+    {
+      name: "WebDev Gifts",
+      category: 'webdev',
+      description: "This was a our final group project. This progressive web application is an e-commerce platform to purchase mock gifts to commemorate teh 2020-2021 Web Development Bootcamp.  This project was built with React, HTML, CSS and JavaScript, MongoDB, and Mongoose.",
+      index: "6",
+      repo: "https://github.com/mwpx777/webdev-gifts1"
     },
 
   ]);
